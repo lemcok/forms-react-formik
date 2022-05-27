@@ -1,10 +1,13 @@
 import { Formik } from 'formik'
+import { useState } from 'react'
 
 interface FormValues {
 	nombre: string
 	correo: string
 }
 const Form = () => {
+	const [isSubmit, setIsSubmit] = useState(false)
+
 	const initialValues: FormValues = {
 		nombre: '',
 		correo: ''
@@ -31,8 +34,12 @@ const Form = () => {
 					return errors
 				}}
 				onSubmit={(values, { resetForm })=> {
-					resetForm()
 					console.log( 'formulario enviado!!', values )
+					resetForm()
+					setIsSubmit(!isSubmit)
+					setTimeout(() => {
+						setIsSubmit(false)
+					}, 4000);
 				}}
 			>
 				{({ handleSubmit, values:{ nombre, correo }, handleChange, handleBlur, touched, errors }) => (
@@ -68,6 +75,7 @@ const Form = () => {
 						</div>
 
 						<button type="submit">Enviar</button>
+						{ isSubmit &&  <p className='exito'>Formulario enviado con exito!</p>}
 					</form>
 				)}
 			</Formik>
