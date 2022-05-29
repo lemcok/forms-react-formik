@@ -9,13 +9,15 @@ interface FormValues {
   confirmPassword: string
 }
 
-const onSubmit = (values: FormikValues, actions: FormikHelpers<FormValues>) => {
+const onSubmit = async (values: FormikValues, actions: FormikHelpers<FormValues>) => {
   console.log( actions )
+  await new Promise( resolve => setTimeout(resolve, 1000))
+  actions.resetForm()
   console.log( 'submit success!!' )
 }
 
 export const BasicForm = () => {
-  const { handleSubmit, values, handleChange, handleBlur, errors, touched } = useFormik({
+  const { handleSubmit, values, handleChange, handleBlur, errors, touched, isSubmitting } = useFormik({
     initialValues: {
       email: '',
       age: 0,
@@ -86,7 +88,7 @@ export const BasicForm = () => {
           />
           { touched.confirmPassword && errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p> }
         </div>
-        <button type='submit'>Submit</button>
+        <button type='submit' disabled={ isSubmitting }>Submit</button>
      </form>
   );
 };
