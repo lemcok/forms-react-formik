@@ -1,12 +1,10 @@
-import Form from "./components/Form/Form"
-import FormSecond from "./components/Form/FormSecond"
+import { MainRoute } from "./routes/MainRoute"
 
 export const App = () => {
    return (
       <div className="contenedor">
          <div className="content">
-            <FormSecond />
-            <Form/>
+            <MainRoute/>
          </div>
       </div>
    )

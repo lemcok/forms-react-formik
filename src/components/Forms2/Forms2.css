@@ -1,0 +1,101 @@
+.App {
+   text-align: center;
+   padding: 5rem 1rem;
+ }
+ 
+ .error {
+   color: #fc8181;
+   font-size: 0.75rem;
+   text-align: left;
+   margin-top: 0.25rem;
+ }
+ 
+ .checkbox {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 1rem;
+ }
+ .forms2 {
+   background-color: #1A1D29;
+   min-height: 400px;
+   padding: 1rem 2.5rem;
+   border-radius: .5rem;
+ }
+
+ .forms2 nav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 2rem;
+ }
+ .forms2 nav h3 {
+   margin: 1rem;
+   cursor: pointer;
+   color: #718096;
+ }
+ .forms2 nav h3:hover {
+   color: white;
+ }
+ 
+ .forms2  {
+   width: 95%;
+   max-width: 400px;
+   margin: 0 auto;
+ }
+ 
+ .forms2 label {
+   color: #fff;
+   font-size: 1rem;
+   font-weight: bold;
+   display: block;
+   text-align: left;
+   margin: 1rem 0 0.2rem;
+ }
+ 
+ .forms2 input,
+ .forms2 select {
+   width: 100%;
+   padding: 0.65rem 0.5rem;
+   font-size: 1rem;
+   color: white;
+   border: 2px solid #4a5568;
+   background-color: #2d3748;
+   border-radius: 10px;
+   outline: none;
+ }
+ 
+ .forms2 input:focus,
+ .forms2 select:focus {
+   border-color: #4299e1;
+ }
+ 
+ .forms2 input::placeholder,
+ .forms2 select::placeholder {
+   color: #a0aec0;
+ }
+ 
+ .forms2 input[type="checkbox"] {
+   width: fit-content;
+   margin-right: 0.5rem;
+   transform: scale(1.25);
+ }
+ 
+ .forms2 button {
+   display: block;
+   margin: 1rem 0;
+   padding: 0.6rem 0.5rem;
+   background-color: #4299e1;
+   color: #1a202c;
+   border: none;
+   border-radius: 3px;
+   width: 100%;
+   font-size: 1rem;
+   font-weight: bold;
+   cursor: pointer;
+ }
+ 
+ input.input-error,
+ select.input-error{
+   border-color: #fc8181;
+ }

@@ -53,7 +53,7 @@ const Form = () => {
 								id="nombre"
 								value={ nombre }
 								onChange={ handleChange }
-								onBlur={ handleBlur }
+								onBlur={ handleBlur } // ejecuta una funcion cunado sales del input: sirve para validar el campo
 								autoComplete='off'
 							/>
 							{ touched.nombre && errors.nombre && <div className='error'>{errors.nombre}</div> }
