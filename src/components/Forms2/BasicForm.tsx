@@ -10,7 +10,6 @@ interface FormValues {
 }
 
 const onSubmit = async (values: FormikValues, actions: FormikHelpers<FormValues>) => {
-  console.log( actions )
   await new Promise( resolve => setTimeout(resolve, 1000))
   actions.resetForm()
   console.log( 'submit success!!' )
